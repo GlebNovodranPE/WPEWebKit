@@ -316,6 +316,7 @@ struct WebPageCreationParameters {
 
     std::optional<RemotePageParameters> remotePageParameters { };
     std::optional<ProvisionalFrameCreationParameters> provisionalFrameCreationParameters { };
+    uint32_t localStorageQuota;
     WebCore::FrameIdentifier mainFrameIdentifier;
     String openedMainFrameName;
     std::optional<WebCore::FrameIdentifier> mainFrameOpenerIdentifier { };
