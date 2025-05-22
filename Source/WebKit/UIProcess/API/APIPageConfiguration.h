@@ -574,6 +574,7 @@ private:
 
         HashMap<WTF::String, Ref<WebKit::WebURLSchemeHandler>> urlSchemeHandlers;
         Vector<WTF::String> corsDisablingPatterns;
+        Vector<WTF::String> localUniversalAccessAllowList;
         HashSet<WTF::String> maskedURLSchemes;
         bool maskedURLSchemesWasSet { false };
         bool crossOriginAccessControlCheckEnabled { true };

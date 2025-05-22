@@ -1740,6 +1740,7 @@ public:
     void setOverriddenMediaType(const String&);
 
     void updateCORSDisablingPatterns(Vector<String>&&);
+    void setLocalUniversalAccessAllowList(Vector<String>&&);
 
 #if ENABLE(IPC_TESTING_API)
     bool ipcTestingAPIEnabled() const { return m_ipcTestingAPIEnabled; }
@@ -2004,6 +2005,8 @@ public:
 #endif
 
     std::unique_ptr<FrameInfoData> takeMainFrameNavigationInitiator();
+
+    const Vector<String>& localUniversalAccessAllowList() const { return m_localUniversalAccessAllowList; };
 
 private:
     WebPage(WebCore::PageIdentifier, WebPageCreationParameters&&);
@@ -3039,6 +3042,7 @@ private:
     bool m_textManipulationIncludesSubframes { false };
 
     Vector<String> m_corsDisablingPatterns;
+    Vector<String> m_localUniversalAccessAllowList;
 
     std::unique_ptr<WebCore::CachedPage> m_cachedPage;
 
