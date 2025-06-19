@@ -34,6 +34,7 @@
 #include "WebFramePolicyListenerProxy.h"
 #include "WebPageProxyIdentifier.h"
 #include "WebPageProxyMessageReceiverRegistration.h"
+#include "WebsiteDataStore.h"
 #include <WebCore/DiagnosticLoggingClient.h>
 #include <WebCore/FrameIdentifier.h>
 #include <WebCore/FrameLoaderClient.h>
